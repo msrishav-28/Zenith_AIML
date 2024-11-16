@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Job Recommendations</title>
+</head>
+<body>
+    <h1>Welcome, {{ user_name }}</h1>
+    <h2>Your Skills:</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Job Recommendations:</h2>
+    <ul>
+        {% for job in jobs %}
+        <li>
+            <strong>{{ job['Job Title'] }}</strong> at {{ job['Company Name'] }}
+            <br>
+            Location: {{ job['Location'] }} | Estimated Salary: {{ job['Estimated Salary'] }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
